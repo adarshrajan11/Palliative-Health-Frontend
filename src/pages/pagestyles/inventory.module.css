@@ -1,0 +1,104 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(90deg, #C7C5F4, #776BCC);
+  font-family: Raleway, sans-serif;
+}
+
+.inventory {
+  background: linear-gradient(90deg, #5D54A4, #7C78B8);
+  width: 100%;
+  max-width: 600px;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0px 0px 24px #5C5696;
+  color: #fff;
+}
+
+.inventory h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.inventory ul {
+  list-style: none;
+  padding: 0;
+}
+
+.inventory li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #D1D1D4;
+}
+
+.inventory button {
+  background: #fff;
+  color: #4C489D;
+  padding: 8px 12px;
+  border-radius: 20px;
+  border: 1px solid #D4D3E8;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.inventory button:hover {
+  background: #4C489D;
+  color: #fff;
+  border-color: #6A679E;
+}
+
+.addItem,
+.editItem {
+  margin-top: 20px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 2px 2px #5C5696;
+}
+
+.addItem input,
+.editItem input {
+  width: calc(100% - 16px);
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #D1D1D4;
+  border-radius: 4px;
+  background: none;
+  color: #4C489D;
+  font-weight: 700;
+}
+
+.addItem input:focus,
+.editItem input:focus {
+  border-color: #6A679E;
+  outline: none;
+}
+
+.addItem button,
+.editItem button {
+  width: 100%;
+  background: #5D54A4;
+  color: #fff;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  transition: 0.2s;
+}
+
+.addItem button:hover,
+.editItem button:hover {
+  background: #4C489D;
+}
+
+.error {
+  color: red;
+  margin-bottom: 20px;
+  text-align: center;
+}

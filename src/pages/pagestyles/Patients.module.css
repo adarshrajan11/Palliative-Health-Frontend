@@ -1,0 +1,41 @@
+/* src/pages/Patients.module.css */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: auto;
+}
+
+.heading {
+  color: #4c489d;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.list {
+  width: 100%;
+  list-style-type: none;
+  padding: 0;
+}
+
+.listItem {
+  background: linear-gradient(90deg, #5d54a4, #7c78b8);
+  color: white;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.3s;
+}
+
+.listItem:hover {
+  background: linear-gradient(90deg, #7c78b8, #5d54a4);
+}
