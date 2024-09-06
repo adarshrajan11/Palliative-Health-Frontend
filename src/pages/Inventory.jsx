@@ -5,7 +5,7 @@ import styles from './pagestyles/inventory.module.css'
 const Inventory = () => {
   const [inventoryItems, setInventoryItems] = useState([])
   const [newItem, setNewItem] = useState({
-    name: '',
+    itemName: '',
     quantity: 0,
     description: '',
   })
@@ -29,7 +29,7 @@ const Inventory = () => {
     try {
       const response = await axios.post('/api/inventory', newItem)
       setInventoryItems([...inventoryItems, response.data])
-      setNewItem({ name: '', quantity: 0, description: '' })
+      setNewItem({ itemName: '', quantity: 0, description: '' })
     } catch (err) {
       setError('Failed to add inventory item')
     }
@@ -82,8 +82,10 @@ const Inventory = () => {
           <h3>Add New Item</h3>
           <input
             type='text'
-            value={newItem.name}
-            onChange={(e) => setNewItem({ ...newItem, name: e.target.value })}
+            value={newItem.itemName}
+            onChange={(e) =>
+              setNewItem({ ...newItem, itemName: e.target.value })
+            }
             placeholder='Item Name'
           />
           <input
@@ -111,7 +113,7 @@ const Inventory = () => {
             <h3>Edit Item</h3>
             <input
               type='text'
-              value={editingItem.name}
+              value={editingItem.itemName}
               onChange={(e) =>
                 setEditingItem({ ...editingItem, name: e.target.value })
               }
