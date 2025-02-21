@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import styles from './LoginStyle.module.css'
 
 const Login = () => {
-  const [email, setEmail] = useState('')
+  const [email, setEmail] = useState('john@example.com')
   const [password, setPassword] = useState('')
   const [error, setError] = useState('')
   const navigate = useNavigate()
@@ -25,6 +25,7 @@ const Login = () => {
     } catch (err) {
       setError('Invalid credentials')
     }
+    console.log(localStorage.getItem(token))
   }
 
   return (
